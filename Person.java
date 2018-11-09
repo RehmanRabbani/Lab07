@@ -1,4 +1,5 @@
-package Person_info;
+package com.hibernate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ import javax.persistence.UniqueConstraint;
 public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	@Column(name = "id", length=11, nullable=false, unique=true)
 
 	private Integer personId;
@@ -21,19 +23,17 @@ public class Person {
 
 	private String personName;
 
-	@Column(fatherName = "fatherName", length=20, nullable=true)
+	@Column(name = "fatherName", length=20, nullable=true)
 
 	private String fatherName;
 
-	@Column(organization = "organization", length=20, nullable=true)
+	@Column(name = "organization", length=20, nullable=true)
 
 	private String organization;
 
-	@Column(mobile = "mobile", length=20, nullable=true)
+	@Column(name = "mobile", length=20, nullable=true)
 
 	private String mobile;
-
-	public Person() { }
 
 	public Person(Integer personId, String personName, String fatherName,String organization, String mobile) {
 
@@ -78,3 +78,4 @@ public class Person {
 	     return "Person_Id: " + this.personId + ", Name: " + this.personName + ", Organization: " + this.organization + ", Mobile: " + this.mobile  ;
 	}
 }
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+	<class name="com.hibernate.Person" table="person">
+		<id name="personId" column="personId">
+			<generator class="increment" />
+		</id>
+		<property name="personName" type="string" column="personName" />
+		<property name="fatherName" type="string" column="fatherName" />
+		<property name="organization" type="string" column="organization" />
+		<property name="mobile" type="string" column="mobile" />
+	</class>
+ 
+</hibernate-mapping>
