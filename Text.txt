@@ -1,0 +1,2 @@
+This code is about mainting a person recod in the database. Install Eclipse IDE. Download Hibernate required jar files
+and place them in class path in lib folder. Make the required classes and you are good to go.
